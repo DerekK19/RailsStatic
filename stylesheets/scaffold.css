@@ -131,7 +131,7 @@ div.left-menu
 {
 	float: left;
 	background-color: #bbf;
-	background: url("/static/css-gradient.gif") 0% 0% repeat-x;
+	background: url("/static/images/css-gradient.gif") 0% 0% repeat-x;
 	width: 185px;
 	height: 300px;
 	z-index: -1;
@@ -157,7 +157,7 @@ div.tab-header
 	font-weight:bold;
 	display: block;
 	padding:0px 0px;
-	background:url("/static/tab_background.gif") repeat-x;
+	background:url("/static/images/tab_background.gif") repeat-x;
 	height: 34px;
 	background-color: #1e5ebd;
 	margin: 0px 0px 0px 195px;
@@ -173,7 +173,7 @@ div.tab-header
 	height:24px;
 	color:#fff;
 	text-decoration:none;
-	background:url("/static/tab_tab.gif") no-repeat;
+	background:url("/static/images/tab_tab.gif") no-repeat;
 	float:left;
 	padding: 10px 10px 0px;
 	margin:0 -10px;
@@ -458,7 +458,7 @@ div.progressBar div.background {
 }
 .apple_pagination span.current {
     font-weight: bold;
-    background: transparent url("/static/apple-circle.gif") no-repeat 50% 50%;
+    background: transparent url("/static/images/apple-circle.gif") no-repeat 50% 50%;
 }
 .apple_pagination a {
     text-decoration: none;
