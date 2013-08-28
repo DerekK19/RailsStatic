@@ -79,7 +79,7 @@ div.header
 {
 	background-color: #1e5ebd;
 	width: 100%;
-	height: 78px;
+	height: 92px;
 }
 
 div.left-header
@@ -111,7 +111,7 @@ img.ruby-icon
 	width: 37px;
 	height: 47px;
 	margin-top: 20px;
-	margin-bottom: -3px;
+	margin-bottom: 12px;
 	padding-bottom: 0px;
 	z-index: 1;
 }
