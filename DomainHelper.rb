@@ -2,8 +2,10 @@ module DomainHelper
 
 	def DomainHelper.machine_menu_items
 		[
-			['Production','localhost/sample'],
-			['Development','localHost:8000/devsample']
+			['rails', 'rails', ''],
+			['macrails', 'macrails', ''],
+			['stagemacrails', 'devmacrails', ''],
+			['devmacrails', 'devmacrails:8000', 'dk']
 		]
 	end
 
