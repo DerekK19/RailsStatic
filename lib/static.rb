@@ -1,6 +1,8 @@
-module DomainHelper
+require "static/version"
 
-	def DomainHelper.machine_menu_items
+module Static
+
+	def Static.machine_menu_items
 		[
 			['rails', 'rails', ''],
 			['macrails', 'macrails', ''],
