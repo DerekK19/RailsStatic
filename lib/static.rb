@@ -11,4 +11,25 @@ module Static
 		]
 	end
 
+	def Static.navbar_items
+		{
+			"development" =>
+				[
+					['Elements', 'elements'],
+					['Photos', 'photos'],
+					['Weather', 'weather']
+				],
+			"staging" =>
+				[
+					['Elements', 'elements'],
+					['Weather', 'weather']
+				],
+			"production" =>
+				[
+					['Elements', 'elements'],
+					['Weather', 'weather']
+				]
+		}
+	end
+
 end
