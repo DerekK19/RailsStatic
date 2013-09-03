@@ -15,9 +15,9 @@ module Static
 		{
 			"development" =>
 				[
-					['Elements', 'elements'],
+					['Elements', 'dkelements'],
 					['Photos', 'photos'],
-					['Weather', 'weather']
+					['Weather', 'dkweather']
 				],
 			"staging" =>
 				[
