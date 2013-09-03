@@ -15,19 +15,19 @@ module Static
 		{
 			"development" =>
 				[
-					['Elements', 'dkelements'],
-					['Photos', 'photos'],
-					['Weather', 'dkweather']
+					['Elements', 'dkelements', 'elements'],
+					['Photos', 'dkphotos', 'photos'],
+					['Weather', 'dkweather', 'weather']
 				],
 			"staging" =>
 				[
-					['Elements', 'elements'],
-					['Weather', 'weather']
+					['Elements', 'elements', 'elements'],
+					['Weather', 'weather', 'weather']
 				],
 			"production" =>
 				[
-					['Elements', 'elements'],
-					['Weather', 'weather']
+					['Elements', 'elements', 'elements'],
+					['Weather', 'weather', 'weather']
 				]
 		}
 	end
@@ -41,12 +41,12 @@ module Static
 	def Static.header(right_text, right_link, current_header, current_navbar)
 		site=''
 		n = Static::navbar_items[Rails::env]
-		n.each {|x| site += x[0] == current_navbar ? x[1] : ''}
+		n.each {|x| site += x[0] == current_navbar ? x[2] : ''}
 		rValue ='
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
 	    <div class="machine-header"><ul>'
-	    Static::machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + site + '">' + x[0] + '</a></li>' }
+	    Static::machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + x[2] + site + '">' + x[0] + '</a></li>' }
 		rValue += '
 	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
@@ -66,15 +66,11 @@ module Static
 	'
 	end
 
-	def Static.footer(dev_link)
-		l = 'Rails'
-		if Rails::env == 'development'
-		    l = dev_link
-		end
+	def Static.footer(rails_link)
 		'
 		  <div class="footer">
 			<div class="left-footer">Copyright &copy;' + Time.now.year.to_s + ' Derek Knight</div>
-			<div class="right-footer">Powered by Ruby on ' + l + ' (' + Rails::env + '). [Ruby ' + RUBY_VERSION + ', Rails ' + Rails::VERSION::STRING + ']</div>
+			<div class="right-footer">Powered by Ruby on ' + rails_link + ' (' + Rails::env + '). [Ruby ' + RUBY_VERSION + ', Rails ' + Rails::VERSION::STRING + ']</div>
 		  </div>
 		'
 	end
