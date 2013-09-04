@@ -16,18 +16,20 @@ module Static
 			"development" =>
 				[
 					['Elements', 'dkelements', 'elements'],
-					['Photos', 'dkphotos', 'photos'],
-					['Weather', 'dkweather', 'weather']
+					['Weather', 'dkweather', 'weather'],
+					['LRIC', 'dklric', 'lric']
 				],
 			"staging" =>
 				[
 					['Elements', 'elements', 'elements'],
-					['Weather', 'weather', 'weather']
+					['Weather', 'weather', 'weather'],
+					['LRIC', 'lric', 'lric']
 				],
 			"production" =>
 				[
 					['Elements', 'elements', 'elements'],
-					['Weather', 'weather', 'weather']
+					['Weather', 'weather', 'weather'],
+					['LRIC', 'lric', 'lric']
 				]
 		}
 	end
@@ -66,7 +68,8 @@ module Static
 	'
 	end
 
-	def Static.footer(rails_link)
+	def Static.footer(url_root)
+		rails_link = Rails::env == 'development' ? ('<a href="' + url_root + '/rails/info/properties' + '">' + 'Rails' + '</a>') : 'Rails'
 		'
 		  <div class="footer">
 			<div class="left-footer">Copyright &copy;' + Time.now.year.to_s + ' Derek Knight</div>
